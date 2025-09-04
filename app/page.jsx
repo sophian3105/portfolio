@@ -1,4 +1,6 @@
 import ProjectCard from "components/ProjectCard";
+import ExperienceCard from "components/ExperienceCard";
+
 
 export default function Page() {
   return (
@@ -68,14 +70,62 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="projects" className="snap-start mx-auto max-w-7xl px-6 sm:px-8 py-16 sm:py-24">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          <ProjectCard title="RehabPal" image="/projects/rehabpal.jpg" href="https://github.com/raphaelpalacio/rehab-application" />
-          <ProjectCard title="Steersafe" image="/images/Steersafe.png" href="https://github.com/joonhoswe/SteerSafe" />
-          <ProjectCard title="ARIA" image="/images/ARIA.png" href="https://github.com/sophian3105/ARKit" />
-          <ProjectCard title="BiteBudget" image="/images/BiteBudget.png" href="https://github.com/joonhoswe/bitebudget" />
-        </div>
-      </section>
+        <section id="projects" className="snap-start mx-auto max-w-7xl px-6 sm:px-8 py-16 sm:py-24">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            <ProjectCard title="RehabPal" image="/projects/rehabpal.jpg" href="https://github.com/raphaelpalacio/rehab-application" />
+            <ProjectCard title="Steersafe" image="/images/Steersafe.png" href="https://github.com/joonhoswe/SteerSafe" />
+            <ProjectCard title="ARIA" image="/images/ARIA.png" href="https://github.com/sophian3105/ARKit" />
+            <ProjectCard title="BiteBudget" image="/images/BiteBudget.png" href="https://github.com/joonhoswe/bitebudget" />
+            </div>
+        </section>
+
+        <section id="experience" className="snap-start mx-auto max-w-7xl px-6sm:px-40 py-40 sm:py-40">
+                <h2 className="text-4xl font-semibold text-zinc-100">Experiences</h2>
+                <ul className="mt-6 divide-y divide-zinc-800/80">
+                <ExperienceCard
+                    company="Faire"
+                    date="Sept 2025 - Dec 2025"
+                    title="iOS Intern"
+                    location="Toronto, ON"
+                    logo="/images/Faire.png"
+                />
+                <ExperienceCard
+                    company="Ford Motor Company"
+                    date="Jan 2025 - Apr 2025"
+                    title="Android HMI Intern"
+                    location="Waterloo, ON"
+                    logo="/images/ford.jpeg"
+                />
+                <ExperienceCard
+                    company="Creospark Consulting"
+                    date="May 2024 - Aug 2024"
+                    title="Technology Consultant"
+                    location="Toronto, ON"
+                    logo="/images/creospark.png"
+                />
+                <ExperienceCard
+                    company="Explorer Hop"
+                    date="May 2022 - Aug 2023"
+                    title="Content Developer"
+                    location="Toronto, ON"
+                    logo="/images/explorer.png"
+                />
+                <ExperienceCard
+                    company="Youth Culture"
+                    date="Mar 2023 - Apr 2023"
+                    title="Technology Consultant"
+                    location="Project Intern"
+                    logo="/images/youth.jpeg"
+                />
+                <ExperienceCard
+                    company="York University"
+                    date="June 2022 - July 2022"
+                    title="Laboratory Research Assistant"
+                    location="Toronto, ON"
+                    logo="/images/york.png"
+                />
+                </ul>
+        </section>
     </main>
   );
 }
