@@ -1,5 +1,7 @@
 import ProjectCard from "components/ProjectCard";
 import ExperienceCard from "components/ExperienceCard";
+import AboutSection from "components/AboutSection";
+
 
 
 export default function Page() {
@@ -21,13 +23,13 @@ export default function Page() {
                   href="/resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-mono text-sm text-zinc-100 underline decoration-zinc-500 hover:text-zinc-300 w-max"
+                  className="font-mono text-lg text-zinc-100 underline decoration-zinc-500 hover:text-zinc-300 w-max"
                 >
                   View resume
                 </a>
                 <a
                   href="#projects"
-                  className="font-mono text-sm text-zinc-100 underline decoration-zinc-500 hover:text-zinc-300 w-max"
+                  className="font-mono text-lg text-zinc-100 underline decoration-zinc-500 hover:text-zinc-300 w-max"
                 >
                   View portfolio
                 </a>
@@ -46,13 +48,13 @@ export default function Page() {
                 {[
                   { label: 'Projects', href: '#projects' },
                   { label: 'Experience', href: '#experience' },
-                  { label: 'About', href: '#about' },
+                  { label: 'About', href: '#contact' },
                   { label: 'Contact', href: '#contact' },
                 ].map((item) => (
                   <li key={item.label}>
                     <a
                       href={item.href}
-                      className="font-mono text-sm underline decoration-zinc-500 text-zinc-100 hover:text-zinc-300"
+                      className="font-mono text-lg underline decoration-zinc-500 text-zinc-100 hover:text-zinc-300"
                     >
                       {item.label}
                     </a>
@@ -60,11 +62,6 @@ export default function Page() {
                 ))}
               </ul>
 
-              <div className="mt-8 flex items-center gap-4 text-zinc-400">
-                <button className="font-mono text-xs">EN</button>
-                <button className="font-mono text-xs">中</button>
-                <button className="font-mono text-xs">日</button>
-              </div>
             </aside>
           </div>
         </div>
@@ -72,14 +69,14 @@ export default function Page() {
 
         <section id="projects" className="snap-start mx-auto max-w-7xl px-6 sm:px-8 py-16 sm:py-24">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            <ProjectCard title="RehabPal" image="/projects/rehabpal.jpg" href="https://github.com/raphaelpalacio/rehab-application" />
+            <ProjectCard title="RehabPal" image="/images/rehabpal.png" href="https://github.com/raphaelpalacio/rehab-application" />
             <ProjectCard title="Steersafe" image="/images/Steersafe.png" href="https://github.com/joonhoswe/SteerSafe" />
             <ProjectCard title="ARIA" image="/images/ARIA.png" href="https://github.com/sophian3105/ARKit" />
             <ProjectCard title="BiteBudget" image="/images/BiteBudget.png" href="https://github.com/joonhoswe/bitebudget" />
             </div>
         </section>
 
-        <section id="experience" className="snap-start mx-auto max-w-7xl px-6sm:px-40 py-40 sm:py-40">
+        <section id="experience" className="snap-start mx-auto max-w-7xl px-6sm:px-40 py-40 sm:py-10">
                 <h2 className="text-4xl font-semibold text-zinc-100">Experiences</h2>
                 <ul className="mt-6 divide-y divide-zinc-800/80">
                 <ExperienceCard
@@ -125,6 +122,13 @@ export default function Page() {
                     logo="/images/york.png"
                 />
                 </ul>
+        </section>
+        <section id="about" className="snap-start mx-auto max-w-7xl px-6sm:px-30 py-40 sm:py-10">
+            <AboutSection/>
+        </section>
+        <section id="contact">
+            <a href="mailto:sophian3105@gmail.com">
+            </a>
         </section>
     </main>
   );
